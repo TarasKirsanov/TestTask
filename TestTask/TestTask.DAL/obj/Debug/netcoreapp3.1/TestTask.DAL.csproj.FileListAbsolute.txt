@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\bin\Debug\netcoreapp3.1\TestTask.DAL.deps.json
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\bin\Debug\netcoreapp3.1\TestTask.DAL.dll
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\bin\Debug\netcoreapp3.1\TestTask.DAL.pdb
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\obj\Debug\netcoreapp3.1\TestTask.DAL.csprojAssemblyReference.cache
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\obj\Debug\netcoreapp3.1\TestTask.DAL.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\obj\Debug\netcoreapp3.1\TestTask.DAL.AssemblyInfo.cs
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\obj\Debug\netcoreapp3.1\TestTask.DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\obj\Debug\netcoreapp3.1\TestTask.DAL.dll
+C:\Users\User\Desktop\TestTask\TestTask\TestTask\TestTask.DAL\obj\Debug\netcoreapp3.1\TestTask.DAL.pdb
