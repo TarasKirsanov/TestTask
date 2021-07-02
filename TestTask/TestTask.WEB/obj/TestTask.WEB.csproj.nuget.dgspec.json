@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask\\TestTask.WEB.csproj": {}
+    "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask.WEB\\TestTask.WEB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask\\TestTask.WEB.csproj": {
+    "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask.WEB\\TestTask.WEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask\\TestTask.WEB.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask.WEB\\TestTask.WEB.csproj",
         "projectName": "TestTask.WEB",
-        "projectPath": "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask\\TestTask.WEB.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask.WEB\\TestTask.WEB.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\TestTask\\TestTask\\TestTask\\TestTask.WEB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -43,6 +43,28 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

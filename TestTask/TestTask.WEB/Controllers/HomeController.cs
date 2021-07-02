@@ -5,33 +5,55 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using TestTask.Models;
+using TestTask.WEB.Interfaces;
+using TestTask.WEB.Models;
 
-namespace TestTask.Controllers
+namespace TestTask.WEB.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IContactService _contactService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IContactService contactService)
         {
             _logger = logger;
+            _contactService = contactService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _contactService.GetAllAsync());
         }
 
-        public IActionResult Privacy()
+        public IActionResult OpenAddContact()
         {
-            return View();
+            return PartialView("AddContact");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public async Task<IActionResult> AddNewContact(ContactModel contact)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            await _contactService.CreateAsync(contact);
+            return View("Index",await _contactService.GetAllAsync());
+        }
+
+        public async Task<IActionResult> DeleteContact(Guid id)
+        {
+            await _contactService.DeleteAsync(id);
+            return View("Index",await _contactService.GetAllAsync());
+        }
+
+        public async Task<IActionResult> OpenUpdateContact(Guid id)
+        {
+            return PartialView("UpdateContact",await _contactService.GetAsync(id));
+        }
+
+         [HttpPost]
+        public async Task<IActionResult> UpdateOldContact(ContactModel contact, Guid id)
+        {
+            await _contactService.UpdateAsync(contact);
+            return View("Index",await _contactService.GetAllAsync());
         }
     }
 }

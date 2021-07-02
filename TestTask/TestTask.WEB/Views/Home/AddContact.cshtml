@@ -1,0 +1,45 @@
+﻿
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button class="close" onclick="location.href = '@Url.Action("Index")'">X</button>
+        <h4>Add new contact</h4>
+    </div>
+    <div class="modal-body">
+        <dl class="dl-horizontal">
+            <form method="post" action='@Url.Action("AddNewContact","Home")'>
+                <h5>For additing all inputs must be filled in</h5>
+                <dt>Name:</dt>
+                <dd><input class="notEmpty" id="Name" name="Name" /></dd>
+
+                <dt>Mobile phone:</dt>
+                <dd><input class="notEmpty" id="MobilePhone" name="MobilePhone" /></dd>
+
+                <dt>Job title:</dt>
+                <dd><input class="notEmpty" id="JobTitle" name="JobTitle" /></dd>
+
+                <dt>Birthday:</dt>
+                <dd><input class="notEmpty" id="BirthDate" name="BirthDate" /></dd>
+
+                <button id="ConfirmBtn" class="btn btn-primary" type="submit">ADD</button>
+            </form>
+        </dl>
+    </div>
+</div>
+
+<script>
+
+
+    $('.notEmpty').on("click keyup change blur load", function () {
+        if ($('#BirthDate').val().replace(/[_-]/g, '').length < 10 || $('#MobilePhone').val().replace(/[_-]/g, '').length < 17 || $('#Name').val().length < 1 || $('#JobTitle').val().length < 1) { $('#ConfirmBtn').attr('style', ' visibility: hidden;'); } else { $('#ConfirmBtn').attr('style', 'visibility: visible;'); }
+    });
+
+
+    $('#MobilePhone').mask('+375 (99) 999-99-99');
+    $('#BirthDate').mask('99/99/9999');
+
+</script>
